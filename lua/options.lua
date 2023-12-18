@@ -35,3 +35,6 @@ vim.opt.virtualedit = "block"
 vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
+
+-- enable ejs highlighting as html
+vim.cmd("au BufNewFile,BufRead *.ejs set filetype=html")
