@@ -42,3 +42,7 @@ vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", { noremap = true, silent = tru
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", { noremap = true, silent = true })
 vim.keymap.set("t", "<C-Up>", "<cmd>resize +2<CR>", { noremap = true, silent = true })
 vim.keymap.set("t", "<C-Down>", "<cmd>resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
