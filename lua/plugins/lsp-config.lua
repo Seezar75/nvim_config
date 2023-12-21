@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls"}
+        ensure_installed = {"lua_ls", "rust_analyzer"}
       })
     end
   },
@@ -17,6 +17,13 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+      lspconfig.lua_ls.setup {}
+      lspconfig.rust_analyzer.setup {
+        -- Server-specific settings. See `:help lspconfig-setup`
+        settings = {
+          ['rust-analyzer'] = {},
+        },
+      }
       -- Use LspAttach autocommand to only map the following keys
       -- after the language server attaches to the current buffer
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -47,7 +54,6 @@ return {
           --end, opts)
        end,
       })
-      lspconfig.lua_ls.setup({})
     end
   },
 }
