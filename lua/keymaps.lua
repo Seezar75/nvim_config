@@ -12,7 +12,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', {})
 -- move lines and hold on to yanked text
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", {})
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", {})
-vim.keymap.set("v", "p", '"_dP', opts)
+vim.keymap.set("v", "p", '"_dP', {})
 
 -- exit insert mode with jk  
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true })
