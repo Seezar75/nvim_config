@@ -3,17 +3,17 @@ return {
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
-      ensure_installed = { "c", "lua", "vim", "javascript", "html", "rust" },
-      autoinstall = true,
+      ensure_installed = { "c", "lua", "vim", "javascript", "html", "rust", "java" },
+      auto_install = true,
       highlight = { enable = true },
       indent = { enable = true },
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<leader>ss", -- set to `false` to disable one of the mappings
-          node_incremental = "<leader>si",
-          scope_incremental = "<leader>sc",
-          node_decremental = "<leader>sd",
+          init_selection = "<Enter>", -- "<leader>ss", -- set to `false` to disable one of the mappings
+          node_incremental = "<Enter>", --"<leader>si",
+          scope_incremental = false, --"<leader>sc",
+          node_decremental = "<Backspace>" --"<leader>sd",
         },
       },
       textobjects = {

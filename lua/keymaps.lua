@@ -1,10 +1,13 @@
 
--- wxelescope key bindings
+-- Telescope key bindings
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "Telescome find files"})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = "Live grep"})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "Find in Buffers"})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "Find in Help tags"})
+vim.keymap.set('n', '<leader>ft', builtin.builtin, {desc = "Find in Telescope Builtin"})
+vim.keymap.set('n', '<leader>fr', builtin.resume, {desc = "Find Resume"})
+vim.keymap.set('n', '<leader>fk', builtin.keymaps, {desc = "Find Keymaps"})
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz', {})
 vim.keymap.set('n', '<C-u>', '<C-u>zz', {})

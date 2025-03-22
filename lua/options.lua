@@ -1,16 +1,30 @@
 -- sjketting nvironment
 vim.opt.number = true
 vim.opt.relativenumber = true
+
 vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
+vim.opt.smarttab = true
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+
 vim.opt.wrap = false
 
--- vim.opt.scrolloff = 10
+vim.opt.signcolumn = "yes"
+
+vim.opt.scrolloff = 5
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+
+-- Sets how neovim will display certain whitespace characters in the editor.
+--  See `:help 'list'`
+--  and `:help 'listchars'`
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- set leader key
 vim.g.mapleader = " "
