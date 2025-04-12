@@ -15,13 +15,13 @@ local function create_floating_window(opts)
 	end
 	-- vim.api.nvim_buf_set_option(buf, "bufhidden", "wipe")
 
-	local width = opts.width or vim.api.nvim_get_option("columns")
-	local height = opts.height or vim.api.nvim_get_option("lines")
+	local width = opts.width or vim.api.nvim_get_option_value("columns", {})
+	local height = opts.height or vim.api.nvim_get_option_value("lines", {})
 
 	local win_height = math.ceil(height * 0.8 - 4)
 	local win_width = math.ceil(width * 0.8)
 
-	local row = math.ceil((height - win_height) / 2 - 1)
+	local row = math.ceil((height - win_height) / 2 - 2)
 	local col = math.ceil((width - win_width) / 2)
 
 	local win_config = {
